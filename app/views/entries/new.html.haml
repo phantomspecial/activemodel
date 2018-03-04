@@ -1,0 +1,33 @@
+%h1 New entry
+= form_for @entry, url: confirm_entries_path do |f|
+  - if @entry.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@entry.errors.count, "error")} prohibited this entry from being saved:"
+      %ul
+        - @entry.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    = f.label :name
+    = f.text_area :name
+  .field
+    = f.label :email
+    = f.text_field :email
+  .field
+    = f.label :age
+    = f.number_field :age
+  .field
+    = f.label :tel
+    = f.text_field :tel
+  .field
+    = f.label :wdwe
+    = f.number_field :wdwe
+  .field
+    = f.label :agenda
+    = f.datetime_select :agenda
+  .field
+    = f.label :agreement
+    = f.check_box :agreement
+  .actions
+    = f.submit 'Confirm'
+
