@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyText
+  email: MyString
+  age: 1
+  tel: MyString
+  wdwe: 1
+  agenda: 2018-03-04 15:21:29
+  agreement: 1
+
+two:
+  name: MyText
+  email: MyString
+  age: 1
+  tel: MyString
+  wdwe: 1
+  agenda: 2018-03-04 15:21:29
+  agreement: 1
