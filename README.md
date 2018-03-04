@@ -22,3 +22,11 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+<設計>
+・DBを使わず、Activemodel:modelを利用
+
+・root= entry/new
+newでフォーム入力、confirmで確認、createでメール送信
+送信時には入力されたデータ全てを表示するようにする
