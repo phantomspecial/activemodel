@@ -8,15 +8,21 @@
           %li= message
 
   .field
+    = f.radio_button :radbtn, "未登録", name: "radbtn", class: "radbox"
+    未登録
+    = f.radio_button :radbtn, "登録済", name: "radbtn", class: "radbox"
+    登録済
+
+  .field
     = f.label :name
     = f.text_area :name
-  .field
+  .field#emailbox
     = f.label :email
     = f.text_field :email
-  .field
+  .field#agebox
     = f.label :age
     = f.number_field :age
-  .field
+  .field#telbox
     = f.label :tel
     = f.text_field :tel
   .field
@@ -24,10 +30,11 @@
     = f.number_field :wdwe
   .field
     = f.label :agenda
-    = f.datetime_select :agenda
+    = f.date_field :agenda
   .field
     = f.label :agreement
     = f.check_box :agreement
   .actions
     = f.submit 'Confirm'
+
 
