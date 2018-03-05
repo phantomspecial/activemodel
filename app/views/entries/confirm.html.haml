@@ -1,0 +1,41 @@
+%h1 Confirm entry
+= form_for @entry, url: entries_path do |f|
+  - if @entry.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@entry.errors.count, "error")} prohibited this entry from being saved:"
+      %ul
+        - @entry.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    Name
+    = @entry.name
+    = f.hidden_field :name, value: @entry.name
+
+  - if @entry.radbtn != "登録済"
+    .field
+      Email
+      = @entry.email
+      = f.hidden_field :email, value: @entry.email
+    .field
+      Age
+      = @entry.age
+      = f.hidden_field :age, value: @entry.age
+    .field
+      Tel
+      = @entry.tel
+      = f.hidden_field :tel, value: @entry.tel
+  .field
+    Weekday-Weekend
+    = @entry.wdwe
+    = f.hidden_field :wdwe, value: @entry.wdwe
+  .field
+    Agenda
+    = @entry.agenda
+    = f.hidden_field :agenda, value: @entry.agenda
+  .field
+    Agreement
+    = f.hidden_field :agreement, value: @entry.agreement
+  .actions
+    = f.submit '確定'
+

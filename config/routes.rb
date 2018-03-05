@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   resources :entries, only: [:new, :create] do
     collection do
-      get 'confirm'
+      post 'confirm'
     end
   end
 
